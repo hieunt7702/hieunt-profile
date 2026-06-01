@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nguyễn Trung Hiếu | Full Stack Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Geist:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#b4b5b5",
+                    "surface-bright": "#393939",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "on-surface": "#e2e2e2",
+                    "on-surface-variant": "#c1c6d7",
+                    "on-primary-fixed": "#001a43",
+                    "surface-container": "#1f1f1f",
+                    "surface": "#131313",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface-tint": "#aec6ff",
+                    "inverse-primary": "#0059c5",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "primary": "#aec6ff",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "surface-variant": "#353535",
+                    "primary-fixed-dim": "#aec6ff",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#2a2a2a",
+                    "error-container": "#93000a",
+                    "on-tertiary": "#313030",
+                    "outline": "#8b90a0",
+                    "surface-container-low": "#1b1b1b",
+                    "on-background": "#e2e2e2",
+                    "tertiary-container": "#777676",
+                    "on-tertiary-container": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "outline-variant": "#414754",
+                    "on-error": "#690005",
+                    "error": "#ffb4ab",
+                    "primary-fixed": "#d8e2ff",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "inverse-surface": "#e2e2e2",
+                    "inverse-on-surface": "#303030",
+                    "on-primary-fixed-variant": "#004397",
+                    "on-secondary": "#2f3131",
+                    "surface-container-highest": "#353535",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "secondary-container": "#454747",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary": "#c9c6c5",
+                    "secondary": "#c6c6c7",
+                    "on-primary-container": "#ffffff",
+                    "primary-container": "#0070f3",
+                    "on-primary": "#002e6b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "stack-lg": "64px",
+                    "section-padding": "120px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "container-max": "1200px",
+                    "stack-md": "24px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Geist"],
+                    "display-lg": ["Geist"],
+                    "headline-md": ["Geist"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            background-image: 
+                radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, -20%), rgba(0, 112, 243, 0.15), transparent 60%),
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            scroll-behavior: smooth;
+            transition: background-position 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .glass-card {
+            background: rgba(8, 8, 8, 0.5);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(174, 198, 255, 0.3);
+            box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide-in-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .float-animation-delayed {
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .shimmer-hover:hover {
+            background: linear-gradient(90deg, rgba(8, 8, 8, 0.5), rgba(255,255,255,0.05), rgba(8, 8, 8, 0.5));
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite linear;
+        }
+
+        .spotlight-hover {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spotlight-hover::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at var(--x) var(--y), rgba(174, 198, 255, 0.1), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+        }
+
+        .spotlight-hover:hover::before {
+            opacity: 1;
+        }
+
+        .hero-glow-follow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(0, 112, 243, 0.1), transparent 25%);
+        }
+    </style>
+</head>
+<body class="text-on-surface font-body-md overflow-x-hidden">
+<div class="hero-glow-follow"></div>
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter h-stack-lg flex justify-between items-center">
+<span class="font-display-lg text-headline-md tracking-tighter text-on-surface">HIEU.DEV</span>
+<div class="hidden md:flex gap-stack-md">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#projects">Projects</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#about">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#tech">Tech Stack</a>
+</div>
+<a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2" href="#contact">
+            Hire Me
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</nav>
+<main class="pt-stack-lg">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center py-section-padding" id="hero">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="reveal-on-scroll" id="hero-content">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary mb-6 transition-transform hover:scale-105">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm">AVAILABLE FOR NEW PROJECTS</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight">
+                    Full Stack Developer Building <span class="text-primary italic">Scalable</span> Digital Products
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                    Hi, I'm Nguyễn Trung Hiếu. Born in 2000 and an alumnus of Hanoi University of Science and Technology, I help startups and businesses design, build and scale modern web applications.
+                </p>
+<div class="flex flex-wrap gap-4 mb-16">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-semibold hover:opacity-90 hover:scale-105 transition-all duration-300 flex items-center gap-2" href="#contact">
+                        Hire Me
+                    </a>
+<a class="border border-white/20 bg-white/5 hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#projects">
+                        View Projects
+                    </a>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="glass-card p-4 rounded-xl border border-white/5 shimmer-hover">
+<div class="text-primary font-display-lg text-headline-md mb-1"><span class="count-up" data-target="3">0</span>+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Years Exp.</div>
+</div>
+<div class="glass-card p-4 rounded-xl border border-white/5 shimmer-hover">
+<div class="text-primary font-display-lg text-headline-md mb-1"><span class="count-up" data-target="20">0</span>+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Projects</div>
+</div>
+<div class="glass-card p-4 rounded-xl border border-white/5 shimmer-hover">
+<div class="text-primary font-display-lg text-headline-md mb-1"><span class="count-up" data-target="10">0</span>+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Clients</div>
+</div>
+</div>
+</div>
+<div class="relative reveal-on-scroll" style="transition-delay: 0.2s">
+<div class="absolute -inset-10 bg-primary/20 blur-[120px] rounded-full pointer-events-none float-animation"></div>
+<div class="relative rounded-2xl overflow-hidden glass-card p-2 aspect-[4/5] md:aspect-[3/4] group">
+<img alt="Portrait" class="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWEiwet-TDZWfs5nLc1s9hepO1lwkuaDtGEC7cZuOkxU_9-d5aZnPKUB9RaICsHNJKDair19v_1s_CwOWezoXTr2QlqqX9Y-0YRM0DCuPdk_MB3Ivp1G24HxmW9Ilsr8sz7-54t8OQPum8lDPKRbKlEltZa7kMnd1qbV4TXDr95Er5zay9Kaw0LSDkGfuTBmQ24LEI18UdkT4SzO3oJm5rRjBUcSMOjr1z-VL29rZiJbfiKTMhuxBfZyBmDHjkPpGxcnaCR71CRHFV"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="py-20 border-y border-white/5 bg-surface-container-lowest/50 reveal-on-scroll">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mb-12 uppercase tracking-widest">Trusted by Startups &amp; Businesses</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+<div class="text-headline-md font-display-lg hover:text-primary transition-colors">LUMINA</div>
+<div class="text-headline-md font-display-lg hover:text-primary transition-colors">VELOX</div>
+<div class="text-headline-md font-display-lg hover:text-primary transition-colors">NEXUS</div>
+<div class="text-headline-md font-display-lg hover:text-primary transition-colors">ORION</div>
+</div>
+<div class="mt-20 max-w-3xl mx-auto text-center reveal-on-scroll">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 float-animation" data-weight="fill">format_quote</span>
+<p class="font-headline-md text-headline-md text-on-surface italic mb-6">
+                    "Hieu delivered our platform faster than expected and helped us scale to thousands of users."
+                </p>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-bright flex items-center justify-center font-bold hover:scale-110 transition-transform">JD</div>
+<div class="text-left">
+<div class="font-bold">John Doe</div>
+<div class="text-sm text-on-surface-variant">CTO, Lumina Tech</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-padding overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row gap-20">
+<div class="md:w-1/3 slide-in-left">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-surface mb-6">About Me</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        I am a product-focused engineer who believes in clean architecture and exceptional user experiences. Born in 2000, my journey began at Hanoi University of Science and Technology and has taken me to leading high-stakes enterprise projects.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors">System Architecture &amp; Design</span>
+</li>
+<li class="flex items-center gap-3 group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors">API Performance Optimization</span>
+</li>
+<li class="flex items-center gap-3 group transition-transform hover:translate-x-2">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors">Modern Frontend Workflows</span>
+</li>
+</ul>
+</div>
+<div class="md:w-2/3">
+<div class="relative space-y-12 before:absolute before:left-[11px] before:top-0 before:h-full before:w-[1px] before:bg-white/10">
+<!-- Timeline Items -->
+<div class="relative pl-12 reveal-on-scroll" style="transition-delay: 0.1s">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface border-2 border-primary flex items-center justify-center transition-transform hover:scale-150">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary mb-2 block">2018</span>
+<h3 class="font-headline-md text-headline-md mb-2">HUST Journey Begins</h3>
+<p class="text-on-surface-variant">Started my studies at Hanoi University of Science and Technology (Đại học Bách Khoa Hà Nội), mastering core programming concepts, data structures, and algorithms.</p>
+</div>
+<div class="relative pl-12 reveal-on-scroll" style="transition-delay: 0.2s">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface border-2 border-white/20 hover:border-primary transition-colors"></div>
+<span class="font-label-sm text-label-sm text-primary mb-2 block">2020</span>
+<h3 class="font-headline-md text-headline-md mb-2">Freelancing &amp; Client Work</h3>
+<p class="text-on-surface-variant">Transitioned to professional work, delivering custom websites for local businesses and startups.</p>
+</div>
+<div class="relative pl-12 reveal-on-scroll" style="transition-delay: 0.3s">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface border-2 border-white/20 hover:border-primary transition-colors"></div>
+<span class="font-label-sm text-label-sm text-primary mb-2 block">2022</span>
+<h3 class="font-headline-md text-headline-md mb-2">Graduation &amp; Senior Projects</h3>
+<p class="text-on-surface-variant">Graduated from university and started leading development teams on complex web applications.</p>
+</div>
+<div class="relative pl-12 reveal-on-scroll" style="transition-delay: 0.4s">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface border-2 border-white/20 hover:border-primary transition-colors"></div>
+<span class="font-label-sm text-label-sm text-primary mb-2 block">2024</span>
+<h3 class="font-headline-md text-headline-md mb-2">SaaS &amp; Enterprise Focus</h3>
+<p class="text-on-surface-variant">Building robust SaaS platforms with a focus on performance, security, and developer experience.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Section -->
+<section class="py-section-padding bg-surface-container-low/50" id="tech">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-20 reveal-on-scroll">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Tech Stack</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Modern tools for modern problems. I specialize in the TypeScript ecosystem for type-safe, performant results.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Frontend -->
+<div class="glass-card p-8 rounded-2xl spotlight-hover border-white/5 reveal-on-scroll" style="transition-delay: 0.1s">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 float-animation">
+<span class="material-symbols-outlined">web</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-6">Frontend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Next.js</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">React</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">TypeScript</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Tailwind</span>
+</div>
+</div>
+<!-- Backend -->
+<div class="glass-card p-8 rounded-2xl spotlight-hover border-white/5 reveal-on-scroll" style="transition-delay: 0.2s">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 float-animation-delayed">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-6">Backend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">NestJS</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Node.js</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Express</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Laravel</span>
+</div>
+</div>
+<!-- Data -->
+<div class="glass-card p-8 rounded-2xl spotlight-hover border-white/5 reveal-on-scroll" style="transition-delay: 0.3s">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 float-animation">
+<span class="material-symbols-outlined">database</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-6">Data</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">PostgreSQL</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">MongoDB</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Redis</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Prisma</span>
+</div>
+</div>
+<!-- Cloud -->
+<div class="glass-card p-8 rounded-2xl spotlight-hover border-white/5 reveal-on-scroll" style="transition-delay: 0.4s">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 float-animation-delayed">
+<span class="material-symbols-outlined">cloud_queue</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-6">Cloud</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">AWS</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Docker</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">CI/CD</span>
+<span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Vercel</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-section-padding" id="projects">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex justify-between items-end mb-20 reveal-on-scroll">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Featured Work</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Engineering-led solutions for real business challenges.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 text-primary hover:gap-4 transition-all duration-300" href="#">
+                    View All Projects <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md lg:gap-12">
+<!-- Project Card 1 -->
+<div class="glass-card rounded-3xl overflow-hidden group border-white/5 reveal-on-scroll">
+<div class="aspect-video overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="A sophisticated dashboard interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs4MOI24e7clmgtgJ5B5RzJQsdK0hQH3zGawcF1AcvTJXADewlfJudGe7P88gAB0OnVFgUyQVte01r03bicxKoB4j1kGGVzSvgcKC0Ov6XJdVGcZbOZV2uxrixYvL-6RVFcZCMIqgRS-HnifejHeiIWuekjyk-Bx5w9_QPrxUJpGVB_maiq2dYSK2xVrtHN4KCh6xi8GpEyQbidqsfjUA-oN2U2PjJLypOLNeb2a6gWsS4m8WJKzy8CH64qqbZKTTt_-JAXTyb4zq7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+<div class="flex gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="px-3 py-1 bg-white/20 backdrop-blur rounded-full text-xs">React</span>
+<span class="px-3 py-1 bg-white/20 backdrop-blur rounded-full text-xs">NestJS</span>
+<span class="px-3 py-1 bg-white/20 backdrop-blur rounded-full text-xs">PostgreSQL</span>
+</div>
+</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md mb-4 transition-colors group-hover:text-primary">Recruitment Management System</h3>
+<p class="text-on-surface-variant mb-6">A high-performance SaaS platform for enterprise hiring. Implemented a custom Kanban-style recruitment funnel and automated mailing systems.</p>
+<div class="flex justify-between items-center">
+<div class="text-primary font-label-sm text-label-sm uppercase tracking-widest">30% Efficiency Gain</div>
+<span class="material-symbols-outlined group-hover:translate-x-3 transition-transform duration-300">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="glass-card rounded-3xl overflow-hidden group border-white/5 reveal-on-scroll" style="transition-delay: 0.2s">
+<div class="aspect-video overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Interior design e-commerce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMFmh5-OGDqdTnAlqqDH7JZ-u7kcdYaTApxw4XkfTR1wRVoQT1oLnC-xHceFkeqVUVBwFfDdZeHcaNTMWat_9SSwFj8aWrchd3_OzhjAJvpJMYYhZflqrPUNMDWfJsDPBrsoSbCBYOKy9y-T8KPoMOdYAO_xa6TSoSuQ4XfUjQALdl-J7oHPmSq7ogSV1ugbRKpaxjsD2-jGwrcR9i5zvckBuVIRO27vQiepOqbhqCch37qL7_kFzxAWI8Vq6w7yxMXjH8BqazAZq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+<div class="flex gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="px-3 py-1 bg-white/20 backdrop-blur rounded-full text-xs">Next.js</span>
+<span class="px-3 py-1 bg-white/20 backdrop-blur rounded-full text-xs">Stripe</span>
+<span class="px-3 py-1 bg-white/20 backdrop-blur rounded-full text-xs">Three.js</span>
+</div>
+</div>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md mb-4 transition-colors group-hover:text-primary">Interior Design E-commerce</h3>
+<p class="text-on-surface-variant mb-6">Luxury shopping experience with 3D product previews and a lightning-fast checkout flow using headless Shopify and Stripe.</p>
+<div class="flex justify-between items-center">
+<div class="text-primary font-label-sm text-label-sm uppercase tracking-widest">120K Monthly Visitors</div>
+<span class="material-symbols-outlined group-hover:translate-x-3 transition-transform duration-300">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-padding bg-surface-container-low/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-20 reveal-on-scroll">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Specialized Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="glass-card p-8 rounded-3xl spotlight-hover reveal-on-scroll" style="transition-delay: 0.1s">
+<div class="text-primary mb-6"><span class="material-symbols-outlined text-4xl float-animation">language</span></div>
+<h3 class="font-headline-md text-headline-md mb-4">Website Dev</h3>
+<p class="text-on-surface-variant">High-performance landing pages and marketing sites designed to convert.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl spotlight-hover reveal-on-scroll" style="transition-delay: 0.2s">
+<div class="text-primary mb-6"><span class="material-symbols-outlined text-4xl float-animation-delayed">apps</span></div>
+<h3 class="font-headline-md text-headline-md mb-4">Web Apps</h3>
+<p class="text-on-surface-variant">Complex SaaS products and interactive web platforms built for scale.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl spotlight-hover reveal-on-scroll" style="transition-delay: 0.3s">
+<div class="text-primary mb-6"><span class="material-symbols-outlined text-4xl float-animation">api</span></div>
+<h3 class="font-headline-md text-headline-md mb-4">Backend Dev</h3>
+<p class="text-on-surface-variant">Robust API design and architectural solutions for high-traffic systems.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl spotlight-hover reveal-on-scroll" style="transition-delay: 0.4s">
+<div class="text-primary mb-6"><span class="material-symbols-outlined text-4xl float-animation-delayed">palette</span></div>
+<h3 class="font-headline-md text-headline-md mb-4">UI/UX Design</h3>
+<p class="text-on-surface-variant">User-centric design systems that balance aesthetics with functionality.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Development Process Section -->
+<section class="py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-center mb-20 reveal-on-scroll">How I Build</h2>
+<div class="flex flex-col gap-12">
+<div class="grid grid-cols-1 md:grid-cols-7 gap-4">
+<div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.1s">
+<span class="absolute top-4 left-4 font-label-sm text-primary">01</span>
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">search</span>
+<h4 class="font-bold mb-2">Discovery</h4>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.2s">
+<span class="absolute top-4 left-4 font-label-sm text-primary">02</span>
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">map</span>
+<h4 class="font-bold mb-2">Planning</h4>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.3s">
+<span class="absolute top-4 left-4 font-label-sm text-primary">03</span>
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">draw</span>
+<h4 class="font-bold mb-2">UI/UX</h4>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.4s">
+<span class="absolute top-4 left-4 font-label-sm text-primary">04</span>
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">code</span>
+<h4 class="font-bold mb-2">Dev</h4>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.5s">
+<span class="absolute top-4 left-4 font-label-sm text-primary">05</span>
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">bug_report</span>
+<h4 class="font-bold mb-2">Testing</h4>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.6s">
+<span class="absolute top-4 left-4 font-label-sm text-primary">06</span>
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">rocket_launch</span>
+<h4 class="font-bold mb-2">Deploy</h4>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.7s">
+<span class="absolute top-4 left-4 font-label-sm text-primary">07</span>
+<span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">support_agent</span>
+<h4 class="font-bold mb-2">Support</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements Counter -->
+<section class="py-20 bg-primary/5 border-y border-white/5 reveal-on-scroll">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-2 lg:grid-cols-4 gap-stack-md text-center">
+<div class="group">
+<div class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2 transition-transform group-hover:scale-110"><span class="count-up" data-target="3">0</span>+</div>
+<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold">Years Experience</div>
+</div>
+<div class="group">
+<div class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2 transition-transform group-hover:scale-110"><span class="count-up" data-target="20">0</span>+</div>
+<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold">Projects Delivered</div>
+</div>
+<div class="group">
+<div class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2 transition-transform group-hover:scale-110"><span class="count-up" data-target="10">0</span>+</div>
+<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold">Happy Clients</div>
+</div>
+<div class="group">
+<div class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2 transition-transform group-hover:scale-110"><span class="count-up" data-target="100">0</span>K+</div>
+<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold">Active Users</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="glass-card rounded-[40px] p-12 md:p-24 text-center relative overflow-hidden reveal-on-scroll">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full float-animation"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full float-animation-delayed"></div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Let's Build Something Great Together</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Whether you have a fully-formed idea or just a spark of inspiration, I'm here to help bring your vision to life with world-class engineering.
+                </p>
+<div class="flex flex-col items-center gap-10">
+<a class="group relative px-12 py-6 bg-primary text-on-primary font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95" href="mailto:hello@hieu.dev">
+<span class="relative z-10 text-xl">Hire Me Today</span>
+<div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity"></div>
+</a>
+<div class="flex flex-wrap justify-center gap-8 text-on-surface-variant">
+<a class="flex items-center gap-2 hover:text-primary transition-all hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+                            Email
+                        </a>
+<a class="flex items-center gap-2 hover:text-primary transition-all hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">chat</span>
+                            Zalo
+                        </a>
+<a class="flex items-center gap-2 hover:text-primary transition-all hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">public</span>
+                            Facebook
+                        </a>
+<a class="flex items-center gap-2 hover:text-primary transition-all hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">work</span>
+                            LinkedIn
+                        </a>
+<a class="flex items-center gap-2 hover:text-primary transition-all hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                            GitHub
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding border-t border-white/5 bg-surface reveal-on-scroll">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-display-lg text-headline-md text-on-surface">HIEU.DEV</span>
+<p class="text-on-surface-variant font-body-md">© 2024 Nguyễn Trung Hiếu. Engineered for Excellence.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors hover:-translate-y-1 transform" href="#">Github</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors hover:-translate-y-1 transform" href="#">LinkedIn</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors hover:-translate-y-1 transform" href="#">Facebook</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors hover:-translate-y-1 transform" href="#">Zalo</a>
+</div>
+</div>
+</footer>
+<script>
+    // Smooth Mouse Glow Movement
+    document.addEventListener('mousemove', e => {
+        const x = e.clientX;
+        const y = e.clientY;
+        const xPercent = (x / window.innerWidth) * 100;
+        const yPercent = (y / window.innerHeight) * 100;
+        
+        document.body.style.setProperty('--mouse-x', `${xPercent}%`);
+        document.body.style.setProperty('--mouse-y', `${yPercent}%`);
+        
+        const glow = document.querySelector('.hero-glow-follow');
+        glow.style.setProperty('--mouse-x', `${x}px`);
+        glow.style.setProperty('--mouse-y', `${y}px`);
+    });
+
+    // Intersection Observer for Reveals
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.reveal-on-scroll, .slide-in-left').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // Spotlight effect for cards
+    document.querySelectorAll('.spotlight-hover').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+        });
+    });
+
+    // Advanced Counter Animation
+    const animateCounter = (el) => {
+        const target = parseInt(el.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const startTime = performance.now();
+        
+        const update = (now) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Ease out cubic
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(easeProgress * target);
+            
+            el.innerText = current;
+            
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                el.innerText = target;
+            }
+        };
+        
+        requestAnimationFrame(update);
+    };
+
+    const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                countObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 1 });
+
+    document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+</body></html>
