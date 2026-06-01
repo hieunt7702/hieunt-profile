@@ -209,14 +209,21 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter h-stack-lg flex justify-between items-center">
 <span class="font-display-lg text-headline-md tracking-tighter text-on-surface">HIEU.DEV</span>
 <div class="hidden md:flex gap-stack-md">
-<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#projects">Projects</a>
-<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#about">About</a>
-<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#tech">Tech Stack</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#projects" data-i18n="nav.projects">Projects</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#about" data-i18n="nav.about">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300" href="#tech" data-i18n="nav.tech">Tech Stack</a>
 </div>
-<a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2" href="#contact">
-            Hire Me
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
+<div class="flex items-center gap-4">
+    <div class="flex gap-2 text-sm font-medium items-center">
+        <button id="lang-en" onclick="setLanguage('en')" class="hover:text-primary transition-colors text-primary font-bold">EN</button>
+        <span class="text-on-surface-variant">/</span>
+        <button id="lang-vi" onclick="setLanguage('vi')" class="text-on-surface-variant hover:text-primary transition-colors">VI</button>
+    </div>
+    <a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2" href="#contact">
+        <span data-i18n="nav.hireMe">Hire Me</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    </a>
+</div>
 </div>
 </nav>
 <main class="pt-stack-lg">
@@ -229,34 +236,34 @@
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
 </span>
-<span class="font-label-sm text-label-sm">AVAILABLE FOR NEW PROJECTS</span>
+<span class="font-label-sm text-label-sm" data-i18n="hero.available">AVAILABLE FOR NEW PROJECTS</span>
 </div>
 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight">
-                    Full Stack Developer Building <span class="text-primary italic">Scalable</span> Digital Products
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
-                    Hi, I'm Nguyễn Trung Hiếu. Born in 2000 and an alumnus of Hanoi University of Science and Technology, I help startups and businesses design, build and scale modern web applications.
-                </p>
+    <span data-i18n="hero.title1">Full Stack Developer Building</span> <span class="text-primary italic" data-i18n="hero.title2">Scalable</span> <span data-i18n="hero.title3">Digital Products</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10" data-i18n="hero.desc">
+    Hi, I'm Nguyễn Trung Hiếu. Born in 2000 and an alumnus of Hanoi University of Science and Technology, I help startups and businesses design, build and scale modern web applications.
+</p>
 <div class="flex flex-wrap gap-4 mb-16">
-<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-semibold hover:opacity-90 hover:scale-105 transition-all duration-300 flex items-center gap-2" href="#contact">
-                        Hire Me
-                    </a>
-<a class="border border-white/20 bg-white/5 hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#projects">
-                        View Projects
-                    </a>
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-semibold hover:opacity-90 hover:scale-105 transition-all duration-300 flex items-center gap-2" href="#contact" data-i18n="nav.hireMe">
+    Hire Me
+</a>
+<a class="border border-white/20 bg-white/5 hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105" href="#projects" data-i18n="hero.viewProjects">
+    View Projects
+</a>
 </div>
 <div class="grid grid-cols-3 gap-6">
 <div class="glass-card p-4 rounded-xl border border-white/5 shimmer-hover">
 <div class="text-primary font-display-lg text-headline-md mb-1"><span class="count-up" data-target="3">0</span>+</div>
-<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Years Exp.</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" data-i18n="stats.years">Years Exp.</div>
 </div>
 <div class="glass-card p-4 rounded-xl border border-white/5 shimmer-hover">
 <div class="text-primary font-display-lg text-headline-md mb-1"><span class="count-up" data-target="20">0</span>+</div>
-<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Projects</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" data-i18n="stats.projects">Projects</div>
 </div>
 <div class="glass-card p-4 rounded-xl border border-white/5 shimmer-hover">
 <div class="text-primary font-display-lg text-headline-md mb-1"><span class="count-up" data-target="10">0</span>+</div>
-<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Clients</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" data-i18n="stats.clients">Clients</div>
 </div>
 </div>
 </div>
@@ -271,7 +278,7 @@
 <!-- Trust Section -->
 <section class="py-20 border-y border-white/5 bg-surface-container-lowest/50 reveal-on-scroll">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
-<p class="text-center font-label-sm text-label-sm text-on-surface-variant mb-12 uppercase tracking-widest">Trusted by Startups &amp; Businesses</p>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mb-12 uppercase tracking-widest" data-i18n="trust.title">Trusted by Startups &amp; Businesses</p>
 <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
 <div class="text-headline-md font-display-lg hover:text-primary transition-colors">LUMINA</div>
 <div class="text-headline-md font-display-lg hover:text-primary transition-colors">VELOX</div>
@@ -280,7 +287,7 @@
 </div>
 <div class="mt-20 max-w-3xl mx-auto text-center reveal-on-scroll">
 <span class="material-symbols-outlined text-primary text-5xl mb-6 float-animation" data-weight="fill">format_quote</span>
-<p class="font-headline-md text-headline-md text-on-surface italic mb-6">
+<p class="font-headline-md text-headline-md text-on-surface italic mb-6" data-i18n="trust.quote">
                     "Hieu delivered our platform faster than expected and helped us scale to thousands of users."
                 </p>
 <div class="flex items-center justify-center gap-4">
@@ -298,22 +305,22 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
 <div class="flex flex-col md:flex-row gap-20">
 <div class="md:w-1/3 slide-in-left">
-<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-surface mb-6">About Me</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-surface mb-6" data-i18n="about.title">About Me</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8" data-i18n="about.desc">
                         I am a product-focused engineer who believes in clean architecture and exceptional user experiences. Born in 2000, my journey began at Hanoi University of Science and Technology and has taken me to leading high-stakes enterprise projects.
                     </p>
 <ul class="space-y-4">
 <li class="flex items-center gap-3 group transition-transform hover:translate-x-2">
 <span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="font-body-md text-body-md group-hover:text-primary transition-colors">System Architecture &amp; Design</span>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors" data-i18n="about.skill1">System Architecture &amp; Design</span>
 </li>
 <li class="flex items-center gap-3 group transition-transform hover:translate-x-2">
 <span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="font-body-md text-body-md group-hover:text-primary transition-colors">API Performance Optimization</span>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors" data-i18n="about.skill2">API Performance Optimization</span>
 </li>
 <li class="flex items-center gap-3 group transition-transform hover:translate-x-2">
 <span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="font-body-md text-body-md group-hover:text-primary transition-colors">Modern Frontend Workflows</span>
+<span class="font-body-md text-body-md group-hover:text-primary transition-colors" data-i18n="about.skill3">Modern Frontend Workflows</span>
 </li>
 </ul>
 </div>
@@ -325,26 +332,26 @@
 <div class="w-2 h-2 rounded-full bg-primary"></div>
 </div>
 <span class="font-label-sm text-label-sm text-primary mb-2 block">2018</span>
-<h3 class="font-headline-md text-headline-md mb-2">HUST Journey Begins</h3>
-<p class="text-on-surface-variant">Started my studies at Hanoi University of Science and Technology (Đại học Bách Khoa Hà Nội), mastering core programming concepts, data structures, and algorithms.</p>
+<h3 class="font-headline-md text-headline-md mb-2" data-i18n="about.2018.title">HUST Journey Begins</h3>
+<p class="text-on-surface-variant" data-i18n="about.2018.desc">Started my studies at Hanoi University of Science and Technology (Đại học Bách Khoa Hà Nội), mastering core programming concepts, data structures, and algorithms.</p>
 </div>
 <div class="relative pl-12 reveal-on-scroll" style="transition-delay: 0.2s">
 <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface border-2 border-white/20 hover:border-primary transition-colors"></div>
 <span class="font-label-sm text-label-sm text-primary mb-2 block">2020</span>
-<h3 class="font-headline-md text-headline-md mb-2">Freelancing &amp; Client Work</h3>
-<p class="text-on-surface-variant">Transitioned to professional work, delivering custom websites for local businesses and startups.</p>
+<h3 class="font-headline-md text-headline-md mb-2" data-i18n="about.2020.title">Freelancing &amp; Client Work</h3>
+<p class="text-on-surface-variant" data-i18n="about.2020.desc">Transitioned to professional work, delivering custom websites for local businesses and startups.</p>
 </div>
 <div class="relative pl-12 reveal-on-scroll" style="transition-delay: 0.3s">
 <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface border-2 border-white/20 hover:border-primary transition-colors"></div>
 <span class="font-label-sm text-label-sm text-primary mb-2 block">2022</span>
-<h3 class="font-headline-md text-headline-md mb-2">Graduation &amp; Senior Projects</h3>
-<p class="text-on-surface-variant">Graduated from university and started leading development teams on complex web applications.</p>
+<h3 class="font-headline-md text-headline-md mb-2" data-i18n="about.2022.title">Graduation &amp; Senior Projects</h3>
+<p class="text-on-surface-variant" data-i18n="about.2022.desc">Graduated from university and started leading development teams on complex web applications.</p>
 </div>
 <div class="relative pl-12 reveal-on-scroll" style="transition-delay: 0.4s">
 <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-surface border-2 border-white/20 hover:border-primary transition-colors"></div>
 <span class="font-label-sm text-label-sm text-primary mb-2 block">2024</span>
-<h3 class="font-headline-md text-headline-md mb-2">SaaS &amp; Enterprise Focus</h3>
-<p class="text-on-surface-variant">Building robust SaaS platforms with a focus on performance, security, and developer experience.</p>
+<h3 class="font-headline-md text-headline-md mb-2" data-i18n="about.2024.title">SaaS &amp; Enterprise Focus</h3>
+<p class="text-on-surface-variant" data-i18n="about.2024.desc">Building robust SaaS platforms with a focus on performance, security, and developer experience.</p>
 </div>
 </div>
 </div>
@@ -355,8 +362,8 @@
 <section class="py-section-padding bg-surface-container-low/50" id="tech">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
 <div class="text-center mb-20 reveal-on-scroll">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Tech Stack</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Modern tools for modern problems. I specialize in the TypeScript ecosystem for type-safe, performant results.</p>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6" data-i18n="tech.title">Tech Stack</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto" data-i18n="tech.desc">Modern tools for modern problems. I specialize in the TypeScript ecosystem for type-safe, performant results.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <!-- Frontend -->
@@ -364,7 +371,7 @@
 <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 float-animation">
 <span class="material-symbols-outlined">web</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-6">Frontend</h3>
+<h3 class="font-headline-md text-headline-md mb-6" data-i18n="tech.frontend">Frontend</h3>
 <div class="flex flex-wrap gap-2">
 <span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Next.js</span>
 <span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">React</span>
@@ -377,7 +384,7 @@
 <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 float-animation-delayed">
 <span class="material-symbols-outlined">terminal</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-6">Backend</h3>
+<h3 class="font-headline-md text-headline-md mb-6" data-i18n="tech.backend">Backend</h3>
 <div class="flex flex-wrap gap-2">
 <span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">NestJS</span>
 <span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Node.js</span>
@@ -390,7 +397,7 @@
 <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 float-animation">
 <span class="material-symbols-outlined">database</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-6">Data</h3>
+<h3 class="font-headline-md text-headline-md mb-6" data-i18n="tech.data">Data</h3>
 <div class="flex flex-wrap gap-2">
 <span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">PostgreSQL</span>
 <span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">MongoDB</span>
@@ -403,7 +410,7 @@
 <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 float-animation-delayed">
 <span class="material-symbols-outlined">cloud_queue</span>
 </div>
-<h3 class="font-headline-md text-headline-md mb-6">Cloud</h3>
+<h3 class="font-headline-md text-headline-md mb-6" data-i18n="tech.cloud">Cloud</h3>
 <div class="flex flex-wrap gap-2">
 <span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">AWS</span>
 <span class="px-3 py-1 bg-surface-bright rounded text-sm font-label-sm transition-colors hover:bg-primary/20 hover:text-primary">Docker</span>
@@ -419,11 +426,11 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
 <div class="flex justify-between items-end mb-20 reveal-on-scroll">
 <div>
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Featured Work</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Engineering-led solutions for real business challenges.</p>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4" data-i18n="projects.title">Featured Work</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl" data-i18n="projects.desc">Engineering-led solutions for real business challenges.</p>
 </div>
 <a class="hidden md:flex items-center gap-2 text-primary hover:gap-4 transition-all duration-300" href="#">
-                    View All Projects <span class="material-symbols-outlined">arrow_forward</span>
+    <span data-i18n="projects.viewAll">View All Projects</span> <span class="material-symbols-outlined">arrow_forward</span>
 </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md lg:gap-12">
@@ -440,10 +447,10 @@
 </div>
 </div>
 <div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4 transition-colors group-hover:text-primary">Recruitment Management System</h3>
-<p class="text-on-surface-variant mb-6">A high-performance SaaS platform for enterprise hiring. Implemented a custom Kanban-style recruitment funnel and automated mailing systems.</p>
+<h3 class="font-headline-md text-headline-md mb-4 transition-colors group-hover:text-primary" data-i18n="projects.1.title">Recruitment Management System</h3>
+<p class="text-on-surface-variant mb-6" data-i18n="projects.1.desc">A high-performance SaaS platform for enterprise hiring. Implemented a custom Kanban-style recruitment funnel and automated mailing systems.</p>
 <div class="flex justify-between items-center">
-<div class="text-primary font-label-sm text-label-sm uppercase tracking-widest">30% Efficiency Gain</div>
+<div class="text-primary font-label-sm text-label-sm uppercase tracking-widest" data-i18n="projects.1.metric">30% Efficiency Gain</div>
 <span class="material-symbols-outlined group-hover:translate-x-3 transition-transform duration-300">arrow_forward</span>
 </div>
 </div>
@@ -461,10 +468,10 @@
 </div>
 </div>
 <div class="p-8">
-<h3 class="font-headline-md text-headline-md mb-4 transition-colors group-hover:text-primary">Interior Design E-commerce</h3>
-<p class="text-on-surface-variant mb-6">Luxury shopping experience with 3D product previews and a lightning-fast checkout flow using headless Shopify and Stripe.</p>
+<h3 class="font-headline-md text-headline-md mb-4 transition-colors group-hover:text-primary" data-i18n="projects.2.title">Interior Design E-commerce</h3>
+<p class="text-on-surface-variant mb-6" data-i18n="projects.2.desc">Luxury shopping experience with 3D product previews and a lightning-fast checkout flow using headless Shopify and Stripe.</p>
 <div class="flex justify-between items-center">
-<div class="text-primary font-label-sm text-label-sm uppercase tracking-widest">120K Monthly Visitors</div>
+<div class="text-primary font-label-sm text-label-sm uppercase tracking-widest" data-i18n="projects.2.metric">120K Monthly Visitors</div>
 <span class="material-symbols-outlined group-hover:translate-x-3 transition-transform duration-300">arrow_forward</span>
 </div>
 </div>
@@ -476,28 +483,28 @@
 <section class="py-section-padding bg-surface-container-low/30">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
 <div class="text-center mb-20 reveal-on-scroll">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Specialized Services</h2>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6" data-i18n="services.title">Specialized Services</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <div class="glass-card p-8 rounded-3xl spotlight-hover reveal-on-scroll" style="transition-delay: 0.1s">
 <div class="text-primary mb-6"><span class="material-symbols-outlined text-4xl float-animation">language</span></div>
-<h3 class="font-headline-md text-headline-md mb-4">Website Dev</h3>
-<p class="text-on-surface-variant">High-performance landing pages and marketing sites designed to convert.</p>
+<h3 class="font-headline-md text-headline-md mb-4" data-i18n="services.1.title">Website Dev</h3>
+<p class="text-on-surface-variant" data-i18n="services.1.desc">High-performance landing pages and marketing sites designed to convert.</p>
 </div>
 <div class="glass-card p-8 rounded-3xl spotlight-hover reveal-on-scroll" style="transition-delay: 0.2s">
 <div class="text-primary mb-6"><span class="material-symbols-outlined text-4xl float-animation-delayed">apps</span></div>
-<h3 class="font-headline-md text-headline-md mb-4">Web Apps</h3>
-<p class="text-on-surface-variant">Complex SaaS products and interactive web platforms built for scale.</p>
+<h3 class="font-headline-md text-headline-md mb-4" data-i18n="services.2.title">Web Apps</h3>
+<p class="text-on-surface-variant" data-i18n="services.2.desc">Complex SaaS products and interactive web platforms built for scale.</p>
 </div>
 <div class="glass-card p-8 rounded-3xl spotlight-hover reveal-on-scroll" style="transition-delay: 0.3s">
 <div class="text-primary mb-6"><span class="material-symbols-outlined text-4xl float-animation">api</span></div>
-<h3 class="font-headline-md text-headline-md mb-4">Backend Dev</h3>
-<p class="text-on-surface-variant">Robust API design and architectural solutions for high-traffic systems.</p>
+<h3 class="font-headline-md text-headline-md mb-4" data-i18n="services.3.title">Backend Dev</h3>
+<p class="text-on-surface-variant" data-i18n="services.3.desc">Robust API design and architectural solutions for high-traffic systems.</p>
 </div>
 <div class="glass-card p-8 rounded-3xl spotlight-hover reveal-on-scroll" style="transition-delay: 0.4s">
 <div class="text-primary mb-6"><span class="material-symbols-outlined text-4xl float-animation-delayed">palette</span></div>
-<h3 class="font-headline-md text-headline-md mb-4">UI/UX Design</h3>
-<p class="text-on-surface-variant">User-centric design systems that balance aesthetics with functionality.</p>
+<h3 class="font-headline-md text-headline-md mb-4" data-i18n="services.4.title">UI/UX Design</h3>
+<p class="text-on-surface-variant" data-i18n="services.4.desc">User-centric design systems that balance aesthetics with functionality.</p>
 </div>
 </div>
 </div>
@@ -505,43 +512,43 @@
 <!-- Development Process Section -->
 <section class="py-section-padding">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-center mb-20 reveal-on-scroll">How I Build</h2>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-center mb-20 reveal-on-scroll" data-i18n="process.title">How I Build</h2>
 <div class="flex flex-col gap-12">
 <div class="grid grid-cols-1 md:grid-cols-7 gap-4">
 <div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.1s">
 <span class="absolute top-4 left-4 font-label-sm text-primary">01</span>
 <span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">search</span>
-<h4 class="font-bold mb-2">Discovery</h4>
+<h4 class="font-bold mb-2" data-i18n="process.1">Discovery</h4>
 </div>
 <div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.2s">
 <span class="absolute top-4 left-4 font-label-sm text-primary">02</span>
 <span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">map</span>
-<h4 class="font-bold mb-2">Planning</h4>
+<h4 class="font-bold mb-2" data-i18n="process.2">Planning</h4>
 </div>
 <div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.3s">
 <span class="absolute top-4 left-4 font-label-sm text-primary">03</span>
 <span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">draw</span>
-<h4 class="font-bold mb-2">UI/UX</h4>
+<h4 class="font-bold mb-2" data-i18n="process.3">UI/UX</h4>
 </div>
 <div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.4s">
 <span class="absolute top-4 left-4 font-label-sm text-primary">04</span>
 <span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">code</span>
-<h4 class="font-bold mb-2">Dev</h4>
+<h4 class="font-bold mb-2" data-i18n="process.4">Dev</h4>
 </div>
 <div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.5s">
 <span class="absolute top-4 left-4 font-label-sm text-primary">05</span>
 <span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">bug_report</span>
-<h4 class="font-bold mb-2">Testing</h4>
+<h4 class="font-bold mb-2" data-i18n="process.5">Testing</h4>
 </div>
 <div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.6s">
 <span class="absolute top-4 left-4 font-label-sm text-primary">06</span>
 <span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">rocket_launch</span>
-<h4 class="font-bold mb-2">Deploy</h4>
+<h4 class="font-bold mb-2" data-i18n="process.6">Deploy</h4>
 </div>
 <div class="glass-card p-6 rounded-2xl text-center relative md:pt-12 reveal-on-scroll" style="transition-delay: 0.7s">
 <span class="absolute top-4 left-4 font-label-sm text-primary">07</span>
 <span class="material-symbols-outlined text-primary mb-4 block text-3xl group-hover:scale-125 transition-transform">support_agent</span>
-<h4 class="font-bold mb-2">Support</h4>
+<h4 class="font-bold mb-2" data-i18n="process.7">Support</h4>
 </div>
 </div>
 </div>
@@ -552,19 +559,19 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-2 lg:grid-cols-4 gap-stack-md text-center">
 <div class="group">
 <div class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2 transition-transform group-hover:scale-110"><span class="count-up" data-target="3">0</span>+</div>
-<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold">Years Experience</div>
+<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold" data-i18n="achievements.years">Years Experience</div>
 </div>
 <div class="group">
 <div class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2 transition-transform group-hover:scale-110"><span class="count-up" data-target="20">0</span>+</div>
-<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold">Projects Delivered</div>
+<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold" data-i18n="achievements.projects">Projects Delivered</div>
 </div>
 <div class="group">
 <div class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2 transition-transform group-hover:scale-110"><span class="count-up" data-target="10">0</span>+</div>
-<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold">Happy Clients</div>
+<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold" data-i18n="achievements.clients">Happy Clients</div>
 </div>
 <div class="group">
 <div class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2 transition-transform group-hover:scale-110"><span class="count-up" data-target="100">0</span>K+</div>
-<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold">Active Users</div>
+<div class="text-on-surface-variant uppercase tracking-widest text-xs font-bold" data-i18n="achievements.users">Active Users</div>
 </div>
 </div>
 </section>
@@ -574,13 +581,13 @@
 <div class="glass-card rounded-[40px] p-12 md:p-24 text-center relative overflow-hidden reveal-on-scroll">
 <div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full float-animation"></div>
 <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full float-animation-delayed"></div>
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Let's Build Something Great Together</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8" data-i18n="contact.title">Let's Build Something Great Together</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto" data-i18n="contact.desc">
                     Whether you have a fully-formed idea or just a spark of inspiration, I'm here to help bring your vision to life with world-class engineering.
                 </p>
 <div class="flex flex-col items-center gap-10">
 <a class="group relative px-12 py-6 bg-primary text-on-primary font-bold rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95" href="mailto:hello@hieu.dev">
-<span class="relative z-10 text-xl">Hire Me Today</span>
+<span class="relative z-10 text-xl" data-i18n="contact.hire">Hire Me Today</span>
 <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity"></div>
 </a>
 <div class="flex flex-wrap justify-center gap-8 text-on-surface-variant">
@@ -615,7 +622,7 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
 <div class="flex flex-col items-center md:items-start gap-4">
 <span class="font-display-lg text-headline-md text-on-surface">HIEU.DEV</span>
-<p class="text-on-surface-variant font-body-md">© 2024 Nguyễn Trung Hiếu. Engineered for Excellence.</p>
+<p class="text-on-surface-variant font-body-md" data-i18n="footer.desc">© 2024 Nguyễn Trung Hiếu. Engineered for Excellence.</p>
 </div>
 <div class="flex gap-8">
 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors hover:-translate-y-1 transform" href="#">Github</a>
@@ -626,6 +633,173 @@
 </div>
 </footer>
 <script>
+    const translations = {
+        en: {
+            "nav.projects": "Projects",
+            "nav.about": "About",
+            "nav.tech": "Tech Stack",
+            "nav.hireMe": "Hire Me",
+            "hero.available": "AVAILABLE FOR NEW PROJECTS",
+            "hero.title1": "Full Stack Developer Building",
+            "hero.title2": "Scalable",
+            "hero.title3": "Digital Products",
+            "hero.desc": "Hi, I'm Nguyễn Trung Hiếu. Born in 2000 and an alumnus of Hanoi University of Science and Technology, I help startups and businesses design, build and scale modern web applications.",
+            "hero.viewProjects": "View Projects",
+            "stats.years": "Years Exp.",
+            "stats.projects": "Projects",
+            "stats.clients": "Clients",
+            "trust.title": "Trusted by Startups & Businesses",
+            "trust.quote": "\"Hieu delivered our platform faster than expected and helped us scale to thousands of users.\"",
+            "about.title": "About Me",
+            "about.desc": "I am a product-focused engineer who believes in clean architecture and exceptional user experiences. Born in 2000, my journey began at Hanoi University of Science and Technology and has taken me to leading high-stakes enterprise projects.",
+            "about.skill1": "System Architecture & Design",
+            "about.skill2": "API Performance Optimization",
+            "about.skill3": "Modern Frontend Workflows",
+            "about.2018.title": "HUST Journey Begins",
+            "about.2018.desc": "Started my studies at Hanoi University of Science and Technology (Đại học Bách Khoa Hà Nội), mastering core programming concepts, data structures, and algorithms.",
+            "about.2020.title": "Freelancing & Client Work",
+            "about.2020.desc": "Transitioned to professional work, delivering custom websites for local businesses and startups.",
+            "about.2022.title": "Graduation & Senior Projects",
+            "about.2022.desc": "Graduated from university and started leading development teams on complex web applications.",
+            "about.2024.title": "SaaS & Enterprise Focus",
+            "about.2024.desc": "Building robust SaaS platforms with a focus on performance, security, and developer experience.",
+            "tech.title": "Tech Stack",
+            "tech.desc": "Modern tools for modern problems. I specialize in the TypeScript ecosystem for type-safe, performant results.",
+            "tech.frontend": "Frontend",
+            "tech.backend": "Backend",
+            "tech.data": "Data",
+            "tech.cloud": "Cloud",
+            "projects.title": "Featured Work",
+            "projects.desc": "Engineering-led solutions for real business challenges.",
+            "projects.viewAll": "View All Projects",
+            "projects.1.title": "Recruitment Management System",
+            "projects.1.desc": "A high-performance SaaS platform for enterprise hiring. Implemented a custom Kanban-style recruitment funnel and automated mailing systems.",
+            "projects.1.metric": "30% Efficiency Gain",
+            "projects.2.title": "Interior Design E-commerce",
+            "projects.2.desc": "Luxury shopping experience with 3D product previews and a lightning-fast checkout flow using headless Shopify and Stripe.",
+            "projects.2.metric": "120K Monthly Visitors",
+            "services.title": "Specialized Services",
+            "services.1.title": "Website Dev",
+            "services.1.desc": "High-performance landing pages and marketing sites designed to convert.",
+            "services.2.title": "Web Apps",
+            "services.2.desc": "Complex SaaS products and interactive web platforms built for scale.",
+            "services.3.title": "Backend Dev",
+            "services.3.desc": "Robust API design and architectural solutions for high-traffic systems.",
+            "services.4.title": "UI/UX Design",
+            "services.4.desc": "User-centric design systems that balance aesthetics with functionality.",
+            "process.title": "How I Build",
+            "process.1": "Discovery",
+            "process.2": "Planning",
+            "process.3": "UI/UX",
+            "process.4": "Dev",
+            "process.5": "Testing",
+            "process.6": "Deploy",
+            "process.7": "Support",
+            "achievements.years": "Years Experience",
+            "achievements.projects": "Projects Delivered",
+            "achievements.clients": "Happy Clients",
+            "achievements.users": "Active Users",
+            "contact.title": "Let's Build Something Great Together",
+            "contact.desc": "Whether you have a fully-formed idea or just a spark of inspiration, I'm here to help bring your vision to life with world-class engineering.",
+            "contact.hire": "Hire Me Today",
+            "footer.desc": "© 2024 Nguyễn Trung Hiếu. Engineered for Excellence."
+        },
+        vi: {
+            "nav.projects": "Dự án",
+            "nav.about": "Giới thiệu",
+            "nav.tech": "Công nghệ",
+            "nav.hireMe": "Liên Hệ",
+            "hero.available": "SẴN SÀNG CHO DỰ ÁN MỚI",
+            "hero.title1": "Lập Trình Viên Full Stack Xây Dựng",
+            "hero.title2": "Sản Phẩm Số",
+            "hero.title3": "Mở Rộng Được",
+            "hero.desc": "Xin chào, tôi là Nguyễn Trung Hiếu. Sinh năm 2000, cựu sinh viên Đại học Bách Khoa Hà Nội. Tôi giúp các startup và doanh nghiệp thiết kế, xây dựng và mở rộng các ứng dụng web hiện đại.",
+            "hero.viewProjects": "Xem dự án",
+            "stats.years": "Năm KN",
+            "stats.projects": "Dự án",
+            "stats.clients": "Khách hàng",
+            "trust.title": "Được tin tưởng bởi các Startup & Doanh nghiệp",
+            "trust.quote": "\"Hiếu đã bàn giao nền tảng nhanh hơn dự kiến và giúp chúng tôi mở rộng quy mô lên hàng nghìn người dùng.\"",
+            "about.title": "Về tôi",
+            "about.desc": "Tôi là một kỹ sư tập trung vào sản phẩm, luôn đề cao kiến trúc phần mềm tối ưu và trải nghiệm người dùng xuất sắc. Sinh năm 2000, hành trình của tôi bắt đầu tại Đại học Bách Khoa Hà Nội và đưa tôi đến việc phát triển các dự án quy mô doanh nghiệp.",
+            "about.skill1": "Kiến trúc & Thiết kế Hệ thống",
+            "about.skill2": "Tối ưu hóa Hiệu suất API",
+            "about.skill3": "Quy trình Frontend Hiện đại",
+            "about.2018.title": "Khởi đầu tại Bách Khoa Hà Nội",
+            "about.2018.desc": "Bắt đầu hành trình tại Đại học Bách Khoa Hà Nội, nắm vững các khái niệm lập trình cốt lõi, cấu trúc dữ liệu và giải thuật.",
+            "about.2020.title": "Freelance & Làm việc với khách hàng",
+            "about.2020.desc": "Bắt đầu làm việc chuyên nghiệp, xây dựng các website tùy chỉnh cho doanh nghiệp và startup.",
+            "about.2022.title": "Tốt nghiệp & Dự án lớn",
+            "about.2022.desc": "Tốt nghiệp đại học và bắt đầu dẫn dắt các nhóm phát triển cho các ứng dụng web phức tạp.",
+            "about.2024.title": "Tập trung vào SaaS & Doanh nghiệp",
+            "about.2024.desc": "Xây dựng các nền tảng SaaS mạnh mẽ với trọng tâm là hiệu suất, bảo mật và trải nghiệm nhà phát triển.",
+            "tech.title": "Công nghệ",
+            "tech.desc": "Công cụ hiện đại cho bài toán hiện đại. Tôi chuyên sử dụng hệ sinh thái TypeScript để tạo ra các sản phẩm an toàn về kiểu và hiệu suất cao.",
+            "tech.frontend": "Frontend",
+            "tech.backend": "Backend",
+            "tech.data": "Dữ liệu",
+            "tech.cloud": "Cloud",
+            "projects.title": "Dự án Nổi bật",
+            "projects.desc": "Giải pháp kỹ thuật cho những thách thức kinh doanh thực tế.",
+            "projects.viewAll": "Xem Tất Cả Dự Án",
+            "projects.1.title": "Hệ thống Quản lý Tuyển dụng",
+            "projects.1.desc": "Nền tảng SaaS hiệu suất cao cho tuyển dụng doanh nghiệp. Triển khai phễu tuyển dụng kiểu Kanban và hệ thống gửi email tự động.",
+            "projects.1.metric": "Tăng 30% Hiệu suất",
+            "projects.2.title": "Thương mại điện tử Nội thất",
+            "projects.2.desc": "Trải nghiệm mua sắm xa xỉ với xem trước sản phẩm 3D và quy trình thanh toán siêu tốc sử dụng headless Shopify và Stripe.",
+            "projects.2.metric": "120K Lượt truy cập/tháng",
+            "services.title": "Dịch Vụ Chuyên Môn",
+            "services.1.title": "Phát triển Website",
+            "services.1.desc": "Trang đích và trang tiếp thị hiệu suất cao được thiết kế để tăng tỉ lệ chuyển đổi.",
+            "services.2.title": "Ứng dụng Web",
+            "services.2.desc": "Sản phẩm SaaS phức tạp và nền tảng web tương tác xây dựng để dễ dàng mở rộng.",
+            "services.3.title": "Phát triển Backend",
+            "services.3.desc": "Thiết kế API mạnh mẽ và giải pháp kiến trúc cho hệ thống lưu lượng truy cập cao.",
+            "services.4.title": "Thiết kế UI/UX",
+            "services.4.desc": "Hệ thống thiết kế lấy người dùng làm trung tâm cân bằng giữa thẩm mỹ và công năng.",
+            "process.title": "Quy trình làm việc",
+            "process.1": "Khám phá",
+            "process.2": "Lập kế hoạch",
+            "process.3": "UI/UX",
+            "process.4": "Phát triển",
+            "process.5": "Kiểm thử",
+            "process.6": "Triển khai",
+            "process.7": "Hỗ trợ",
+            "achievements.years": "Năm Kinh Nghiệm",
+            "achievements.projects": "Dự Án Hoàn Thành",
+            "achievements.clients": "Khách Hàng",
+            "achievements.users": "Người Dùng",
+            "contact.title": "Cùng Xây Dựng Những Điều Tuyệt Vời",
+            "contact.desc": "Dù bạn đã có ý tưởng hoàn chỉnh hay chỉ là một tia sáng cảm hứng, tôi ở đây để giúp biến tầm nhìn của bạn thành hiện thực với công nghệ kỹ thuật đẳng cấp thế giới.",
+            "contact.hire": "Liên Hệ Ngay",
+            "footer.desc": "© 2024 Nguyễn Trung Hiếu. Được xây dựng để hướng tới sự xuất sắc."
+        }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                element.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Update active state of buttons
+        document.getElementById('lang-en').classList.toggle('text-primary', lang === 'en');
+        document.getElementById('lang-en').classList.toggle('font-bold', lang === 'en');
+        document.getElementById('lang-vi').classList.toggle('text-primary', lang === 'vi');
+        document.getElementById('lang-vi').classList.toggle('font-bold', lang === 'vi');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setLanguage(currentLang);
+    });
+
     // Smooth Mouse Glow Movement
     document.addEventListener('mousemove', e => {
         const x = e.clientX;
